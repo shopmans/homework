@@ -8,6 +8,7 @@ import (
 
 	// 内部包
 	"gotraining3/week1"
+	"gotraining3/week2"
 )
 
 func main() {
@@ -27,4 +28,6 @@ func main() {
 	//    无法执行下去这时需要wrap这个错误记录为什么修改用户失败了
 	week1.Start(db)
 
+	// 第二周作业
+	week2.Start()
 }
