@@ -16,6 +16,7 @@ import (
 	"gotraining3/internal/week2"
 	"gotraining3/internal/week3/pkg/wire"
 	"gotraining3/internal/week4"
+	"gotraining3/internal/week5"
 )
 
 func main() {
@@ -56,4 +57,7 @@ func main() {
 
 	// 第四周作业
 	week4.Start()
+
+	// 第五周作业
+	week5.Start()
 }
