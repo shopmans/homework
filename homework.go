@@ -3,18 +3,13 @@ package main
 import (
 	// 标准包
 	"database/sql"
-	"log"
 
 	// 第三方包
-	"github.com/go-kratos/kratos/v2"
-	"github.com/go-kratos/kratos/v2/transport/grpc"
 
 	// 内部包
 
-	"gotraining3/api"
 	"gotraining3/internal/week1"
 	"gotraining3/internal/week2"
-	"gotraining3/internal/week3/pkg/wire"
 	"gotraining3/internal/week4"
 	"gotraining3/internal/week5"
 )
@@ -40,20 +35,20 @@ func main() {
 	week2.Start()
 
 	// 第三周作业
-	pictureServer := wire.InitPictureService()
-	grpcServer := grpc.NewServer(grpc.Address(":9000"))
-	api.RegisterHomeworkWeek3Server(grpcServer, pictureServer)
-	app := kratos.New(
-		kratos.Name("homework_week3"),
-		kratos.Version("v1.1"),
-		kratos.Server(
-			grpcServer,
-		),
-	)
+	// pictureServer := wire.InitPictureService()
+	// grpcServer := grpc.NewServer(grpc.Address(":9000"))
+	// api.RegisterHomeworkWeek3Server(grpcServer, pictureServer)
+	// app := kratos.New(
+	// 	kratos.Name("homework_week3"),
+	// 	kratos.Version("v1.1"),
+	// 	kratos.Server(
+	// 		grpcServer,
+	// 	),
+	// )
 
-	if err := app.Run(); err != nil {
-		log.Fatal(err)
-	}
+	// if err := app.Run(); err != nil {
+	// 	log.Fatal(err)
+	// }
 
 	// 第四周作业
 	week4.Start()
