@@ -7,11 +7,11 @@ import (
 	// 第三方包
 
 	// 内部包
-
 	"gotraining3/internal/week1"
 	"gotraining3/internal/week2"
 	"gotraining3/internal/week4"
 	"gotraining3/internal/week5"
+	week6 "gotraining3/internal/week6/pkg"
 )
 
 func main() {
@@ -55,4 +55,7 @@ func main() {
 
 	// 第五周作业
 	week5.Start()
+
+	// 第六周作业
+	week6.Start()
 }
